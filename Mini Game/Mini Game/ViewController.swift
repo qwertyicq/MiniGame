@@ -7,39 +7,53 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
-    var rounds = [CircleView]()
+//    var rounds = [CircleView]()
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//
+//        let rnd = Int.random(in: 3..<7)
+//
+//        for index in 0...rnd {
+//            let maxXinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.maxX)
+//            let maxYinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.maxY)
+//            let minXinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.minX)
+//            let minYinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.minY)
+//
+//            let randomX = Int.random(in: (minXinSafeArea + 50)..<(maxXinSafeArea - 50))
+//            let randomY = Int.random(in: (minYinSafeArea + 50)..<(maxYinSafeArea - 50))
+//
+//            rounds.append(CircleView(frame: CGRect(x: CGFloat(randomX), y: CGFloat(randomY), width: 50, height: 50)))
+//            rounds[index].workingView.backgroundColor = .orange
+//            view.addSubview(rounds[index])
+//        }
+//    }
     
+    //var allViewsInGame = Circle()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         let rnd = Int.random(in: 3..<7)
-        
+
         for index in 0...rnd {
-            let maxXinView = Int(view.safeAreaLayoutGuide.layoutFrame.maxX)
-            let maxYinView = Int(view.safeAreaLayoutGuide.layoutFrame.maxY)
-            
-            var randomX = Int.random(in: 0..<maxXinView)
-            var randomY = Int.random(in: 0..<maxYinView)
-            
-            if CGFloat(randomX - 25) < view.safeAreaLayoutGuide.layoutFrame.minX {
-                randomX += 30
-            } else if CGFloat(randomX + 25) < view.safeAreaLayoutGuide.layoutFrame.maxX {
-                randomX -= 30
-            }
-            if CGFloat(randomY - 25) <  view.safeAreaLayoutGuide.layoutFrame.minY {
-                randomY += 30
-            } else if CGFloat(randomX + 25) < view.safeAreaLayoutGuide.layoutFrame.maxY {
-                randomY -= 30
-            }
-            
-            rounds.append(CircleView(frame: CGRect(x: CGFloat(randomX), y: CGFloat(randomY), width: 50, height: 50)))
-            rounds[index].workingView.backgroundColor = .orange
-            view.addSubview(rounds[index])
+            let maxXinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.maxX)
+            let maxYinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.maxY)
+            let minXinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.minX)
+            let minYinSafeArea = Int(view.safeAreaLayoutGuide.layoutFrame.minY)
+
+            let randomX = Int.random(in: (minXinSafeArea + 50)..<(maxXinSafeArea - 50))
+            let randomY = Int.random(in: (minYinSafeArea + 50)..<(maxYinSafeArea - 50))
+
+            Circle.rounds.append(CircleView(frame: CGRect(x: CGFloat(randomX), y: CGFloat(randomY), width: 50, height: 50)))
+            Circle.rounds[index].indexInArray = index
+            Circle.rounds[index].workingView.backgroundColor = .orange
+            view.addSubview(Circle.rounds[index])
         }
     }
-    
 }
 

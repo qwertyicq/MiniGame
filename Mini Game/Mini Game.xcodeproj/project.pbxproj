@@ -15,6 +15,7 @@
 		8850EAFC269AC19A005C37A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8850EAFA269AC19A005C37A7 /* LaunchScreen.storyboard */; };
 		8850EB04269AC272005C37A7 /* CircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8850EB03269AC272005C37A7 /* CircleView.xib */; };
 		8850EB06269AC2B7005C37A7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850EB05269AC2B7005C37A7 /* CircleView.swift */; };
+		8850EB0C269C4649005C37A7 /* Circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850EB0B269C4649005C37A7 /* Circles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8850EAFD269AC19A005C37A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8850EB03269AC272005C37A7 /* CircleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleView.xib; sourceTree = "<group>"; };
 		8850EB05269AC2B7005C37A7 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		8850EB0B269C4649005C37A7 /* Circles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8850EAF5269AC197005C37A7 /* Main.storyboard */,
 				8850EB03269AC272005C37A7 /* CircleView.xib */,
 				8850EB05269AC2B7005C37A7 /* CircleView.swift */,
+				8850EB0B269C4649005C37A7 /* Circles.swift */,
 				8850EAF8269AC19A005C37A7 /* Assets.xcassets */,
 				8850EAFA269AC19A005C37A7 /* LaunchScreen.storyboard */,
 				8850EAFD269AC19A005C37A7 /* Info.plist */,
@@ -148,6 +151,7 @@
 				8850EAF4269AC197005C37A7 /* ViewController.swift in Sources */,
 				8850EAF0269AC197005C37A7 /* AppDelegate.swift in Sources */,
 				8850EAF2269AC197005C37A7 /* SceneDelegate.swift in Sources */,
+				8850EB0C269C4649005C37A7 /* Circles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
